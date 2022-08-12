@@ -58,3 +58,5 @@ def mainstockgroups(request):
 
 
 
+def costcataug15(request):
+    return render(request, 'costcat.html')
