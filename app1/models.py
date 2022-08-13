@@ -30,3 +30,4 @@ class AgeingAnalysisModel(models.Model):
     value = models.IntegerField(default=0 ,null=True)
     def __str__(self):
         return self.pname
+

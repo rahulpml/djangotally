@@ -54,7 +54,3 @@ def mainstockgroups(request):
     return render(request,'stockgroups.html',context)
 
 
-
-
-
-
