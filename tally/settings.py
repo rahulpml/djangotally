@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'tally.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test',
+        'NAME': 'crudformspy',
         'USER':'root',
         'PASSWORD':'',
         'HOST':'127.0.0.1',

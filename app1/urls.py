@@ -14,7 +14,14 @@ urlpatterns = [
     path('costcentr',views.costcentr,name='costcentr'),
     path('voucher',views.voucher,name='voucher'),
     path('vouchpage',views.vouchpage,name='vouchpage'),
-    path('listofstockgroups',views.listofstockgroups,name='listofstockgroups'),
+
+    path('maingroupsview',views.maingroupsview,name='maingroupsview'),
+    path('maincategoryview',views.maincategoryview,name='maincategoryview'),
+    path('categorysallview',views.categorysallview,name='categorysallview'),
+    path('creategroupsview',views.creategroupsview,name='creategroupsview'),
+    path('createcategoryview',views.createcategoryview,name='createcategoryview'),
+    path('savestockgroup',views.savestockgroup,name='savestockgroup'),
+  
     
 
 
@@ -23,3 +30,4 @@ urlpatterns = [
 
     
 ]
+ 
