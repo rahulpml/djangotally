@@ -21,6 +21,10 @@ urlpatterns = [
     path('creategroupsview',views.creategroupsview,name='creategroupsview'),
     path('createcategoryview',views.createcategoryview,name='createcategoryview'),
     path('savestockgroup',views.savestockgroup,name='savestockgroup'),
+    path('savestockcategory',views.savestockcategory,name='savestockcategory'),
+    path('createseconomygroup',views.createseconomygroup,name='createseconomygroup'),
+
+    
   
     
 

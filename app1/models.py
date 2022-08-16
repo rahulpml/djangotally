@@ -38,7 +38,9 @@ class StockCategoryModel(models.Model):
 class MainStockCategoryModel(models.Model):
     cname=models.CharField(max_length=225)
     alias=models.CharField(max_length=225)
-    under= models.ForeignKey(StockCategoryModel,on_delete=models.SET_NULL, null=True)
+    under= models.CharField(max_length=225 ,null=True ,unique=True)
+    quantities=models.CharField(max_length=100,null=True)
+    category = models.ForeignKey(StockCategoryModel,on_delete=models.SET_NULL, null=True)
     
      
 

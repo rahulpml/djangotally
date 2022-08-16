@@ -92,7 +92,7 @@
             <div class="form1">
                 <a href="javascript:history.go(-1);" class="close">+</a>
                 <h6 style="background-color:rgb(103, 175, 220) ; color:white; text-align: center; padding: 9px 0; width:100%;">Stock Category Creation(Seconadary)</h6>
-                <form action="{% url '' %}" method="post">
+                <form action="{% url 'savestockcategory' %}" method="post">
                 {% csrf_token %}
                 <div class="top">
                     <div class="left1" style="color:white ;">
