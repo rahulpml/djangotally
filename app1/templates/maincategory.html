@@ -35,8 +35,8 @@
 }
 .box-container{
     
-    margin-top: 5px;
-    width:350px;
+    margin-top: 20px;
+    width: 350px;
     height: fit-content;
     padding-bottom: 250px;
     border-color: gray;
@@ -55,7 +55,7 @@
       <hr></hr>
       <a href="{% url 'createcategoryview' %}"><button  class="btns_prnt btn pull-right" id="create"><h6>Create</h6></button></a>
       <a href=""><button  class="btns_prnt"style="float: right;" id="primary"><h6>Primary</h6></button></a>
-      {% for c in cat %}
+      {% for c in category %}
       {% if c.under == 'primary' %}
       <a href=""><button  class="btns_prnt"style="float: right;" id="primary"><h6>{{ c.name }}</h6></button></a>
       {% else %}

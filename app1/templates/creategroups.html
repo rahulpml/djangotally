@@ -11,25 +11,41 @@
                     margin: 0;
                     font-family: Arial, Helvetica, sans-serif;
                 }
+                closehead{
+                    background-color:rgba(0,0,0,.4);
+                    box-shadow: 2px 2px 2px rgba(2, 75, 94, 0.662);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    width: 400px;
+                    height: 630px;
+                    position: absolute;
+                    border-radius: 12px;
+                }
                 .container{
                     height: 40vh;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    /* background-color: rgb(204, 212, 228); */
+                    
+                    
                 }
                 .form1{
-                    background-color:rgba(0,0,0,.4);
-                    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.662);
+                    background-color:rgba(19, 15, 15, 0.4);
+                    box-shadow: 2px 2px 2px rgba(2, 75, 94, 0.662);
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
                     border: none;
-                    width:30%;
+                    width: 400px;
+                    height: 630px;
                     position: absolute;
-                    height: 600px;
+                    border-radius: 12px;
+                    padding-top: 30px;
                 }
                 form{
                     padding: 30px;
@@ -46,7 +62,6 @@
                     border: none;
                     background-color: #2f516f;
                     color: white; 
-                    /* background-color: rgba(0, 0, 0, 0.04); */
                     border: 2px solid rgb(0, 0, 0,0);
                 }
                 input:focus-within,select:focus{
@@ -61,15 +76,16 @@
                     margin-top: 40px;
                     padding: 6px 30px;
                     border-radius: 10px;
-                    border: 4px solid rgb(0, 0, 0,0);
-                    color: white;
-                    background-color: rgb(103, 175, 220);
+                    border: 10px solid rgb(0, 0, 0,0);
+                    color: rgb(207, 219, 221);
+                    background-color: rgb(44, 130, 184);
+                    margin-left: 100px;
                 }
                 button:hover{
                     
-                    border: 4px solid rgb(103, 175, 220);
+                    border: 9px solid rgb(12, 97, 150);
                     color: rgb(103, 175, 220);
-                    background-color: rgb(97, 168, 113);
+                    background-color: rgb(21, 122, 153);
                 }
                 .close {
             position: absolute;
@@ -91,16 +107,18 @@
         <body>
             <div class="container">
             <div class="form1">
-                <a href="javascript:history.go(-1);" class="close">+</a>
-                <h6 style="background-color:rgb(103, 175, 220) ; color:white; text-align: center; padding: 9px 0; width:100%;">Stock Group Creation(Seconadary)</h6>
-                <form action="{% url 'savestockgroup' %}" method="post"> <!--savestockgroup-->
-                    <!--<h6 style="background-color:rgb(103, 175, 220) ; color:white; text-align: center; padding: 9px 0; width:100%;">Stock Group Creation(Seconadary)</h6>-->
+                <div class="closehead"><a href="javascript:history.go(-1);" class="close">+</a>
+                    <h6 style="background-color:rgb(103, 175, 220) ; color:white; text-align: center; padding: 9px 0; width:100%;">Stock Group Creation(Seconadary)</h6></div>
+                
+                
+                <form action="{% url 'savestockgroupview' %}" method="post">
+                    
                 {% csrf_token %}
                 <div class="top">
                     <div class="left1" style="color:white ;">
                     <div><p>Name</p></div>
                     <input type="text"name="name">
-                    <div><p>(Alias)</p></div>
+                    <div><p>(alias)</p></div>
                     <input type="text"name="alias">
                     
         
@@ -109,9 +127,9 @@
       
                         <select style="background-color: #2f516f;color: white;" name="u" id="under">
                            
-                            {% for g in grps %}
+                            {% for g in groups %}
                              
-                            <option value="{{ g.group_name }}">{{ g.group_name }}</option> 
+                            <option value="{{ g.grp_name }}">{{ g.grp_name }}</option> 
                             {% endfor %}
                         </select>
                         
@@ -121,16 +139,17 @@
                             <option value="Yes">Yes</option>
                           
                         </select>
+
                     </select>
                         
-                    <div><p>Set/Alter GST details</p></div>
+                    <div><p>Set/Alter GST Details</p></div>
                     <select style="background-color: #2f516f;color: white;" name="gst">
                         <option value="No">No</option> 
                         <option value="Yes">Yes</option>
                       
                     </select>
                         
-                            <button type="submit">CREATE</button>
+                            <button type="submit">create</button>
                 </div>
                 
                 </form>

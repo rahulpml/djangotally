@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from .models import StockGroupModel ,MainStockGroupModel , StockCategoryModel , MainStockCategoryModel
+from .models import CreateStockGroupModel , CreateStockcategoryModel,MainStockCategoryModel,MainStockGroupModel
 
 # Register your models here.
-admin.site.register(StockGroupModel)
-admin.site.register(MainStockGroupModel)
-admin.site.register(StockCategoryModel)
+admin.site.register(CreateStockcategoryModel)
+admin.site.register(CreateStockGroupModel)
 admin.site.register(MainStockCategoryModel)
+admin.site.register(MainStockGroupModel)

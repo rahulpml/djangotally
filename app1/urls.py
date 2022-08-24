@@ -15,22 +15,19 @@ urlpatterns = [
     path('voucher',views.voucher,name='voucher'),
     path('vouchpage',views.vouchpage,name='vouchpage'),
 
-    path('maingroupsview',views.maingroupsview,name='maingroupsview'),
     path('maincategoryview',views.maincategoryview,name='maincategoryview'),
-    path('categorysallview',views.categorysallview,name='categorysallview'),
+    path('maingroupsview',views.maingroupsview,name='maingroupsview'),
     path('creategroupsview',views.creategroupsview,name='creategroupsview'),
+    path('categorysummary',views.categorysummary,name='categorysummary'),
     path('createcategoryview',views.createcategoryview,name='createcategoryview'),
-    path('savestockgroup',views.savestockgroup,name='savestockgroup'),
-    path('savestockcategory',views.savestockcategory,name='savestockcategory'),
-    path('createseconomygroup',views.createseconomygroup,name='createseconomygroup'),
+    path('savestockgroupview',views.savestockgroupview,name='savestockgroupview'),
+    path('savestockcategoryview',views.savestockcategoryview,name='savestockcategoryview'),
+    path('stockageingsview',views.stockageingsview,name='stockageingsview'),
+    path('stockitemmonthlysummaryview',views.stockitemmonthlysummaryview,name='stockitemmonthlysummaryview'),
+    path('stockitemvouchersview',views.stockitemvouchersview,name='stockitemvouchersview'),
+    path('costestimateview',views.costestimateview,name='costestimateview'),
 
-    
   
-    
-
-
-
-
 
     
 ]
