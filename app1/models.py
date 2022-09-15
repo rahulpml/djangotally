@@ -21,6 +21,8 @@ class MainStockGroupModel(models.Model):
     quantities=models.CharField(max_length=100,null=True)
     gst = models.CharField(max_length=100,null=True)
     group = models.ForeignKey(CreateStockGroupModel,on_delete=models.SET_NULL, null=True)
+    created_on = models.DateTimeField(auto_now_add=True,null=True)
+ 
 
     def __str__(self):
         return self.name
@@ -31,11 +33,21 @@ class MainStockCategoryModel(models.Model):
     under=models.CharField(max_length=50)
     quantities=models.CharField(max_length=100,null=True)
     category = models.ForeignKey(CreateStockcategoryModel,on_delete=models.SET_NULL, null=True)
+    
 
     def __str__(self):
         return self.name
 
 
+class AgeingModel(models.Model):
+    paritculars=models.CharField(max_length=100,null=True)
+    quantity=models.IntegerField(null=True)
+    value=models.IntegerField(null=True)   
+    group = models.ForeignKey(CreateStockGroupModel,on_delete=models.SET_NULL, null=True)
+    category = models.ForeignKey(CreateStockcategoryModel,on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return self.paritculars
 
 
 

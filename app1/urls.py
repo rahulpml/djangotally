@@ -28,7 +28,6 @@ urlpatterns = [
     path('costestimateview',views.costestimateview,name='costestimateview'),
 
   
-
     
 ]
  
